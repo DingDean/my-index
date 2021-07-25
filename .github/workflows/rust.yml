@@ -23,9 +23,10 @@ jobs:
     - name: Setup wasm-bingden-cli
       uses: jetli/wasm-bindgen-action@v0.1.0
     - name: Build
-      run: ./trunk build --release --public-url "/my-index"
+      run: ./trunk build --release
     - name: Publish Github Pages
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
+        cname: www.dingkewz.com
