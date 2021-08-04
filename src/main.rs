@@ -28,21 +28,36 @@ fn view(_model: &Model) -> impl IntoNodes<Msg> {
                 "w-1/3",
                 "min-w-max",
                 "mx-auto",
-                "px-16",
-                "bg-green-300",
-                "rounded-sm",
-                "shadow-md",
-                "text-3xl",
-                "text-gray-600",
-                "text-center",
-                "font-light",
-                "font-mono",
-                "leading-loose",
-                "animate-fade-in"
             ],
-            p!["老的网站因故意外下线",],
-            p!["无心恢复老版设计",],
-            p!["建设新版中，敬请谅解",]
+            div![
+                C![
+                    "px-16",
+                    "bg-green-300",
+                    "rounded-sm",
+                    "shadow-md",
+                    "text-3xl",
+                    "text-gray-600",
+                    "text-center",
+                    "font-light",
+                    "font-mono",
+                    "leading-loose",
+                    "animate-fade-in"
+                ],
+                p!["老的网站因故意外下线",],
+                p!["无心恢复老版设计",],
+                p!["建设新版中，敬请谅解",]
+            ],
+            div! [
+                C![ "flex justify-around mt-4 bg-yellow-200" ],
+                a![
+                    attrs!("href" => "https://github.com/DingDean"),
+                    p!("Github"),
+                ],
+                a![
+                    attrs!("href" => "https://blog.dingkewz.com"),
+                    p!("Blog"),
+                ],
+            ]
         ]
     ]
 }
