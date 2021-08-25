@@ -23,7 +23,7 @@ jobs:
     - name: Setup wasm-bingden-cli
       uses: jetli/wasm-bindgen-action@v0.1.0
     - name: Build
-      run: ./trunk build --release
+      run: ./trunk build --release --public-url my-index
     - name: Publish Github Pages
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
